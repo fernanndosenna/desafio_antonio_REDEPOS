@@ -1,12 +1,11 @@
 EXECUÇÃO DO PROJETO
 
+
 npm install 
 
 npm start
 
-ROTA PRINCIPAL  `/ `
-
-
+http://localhost:8080/
 
 
 
