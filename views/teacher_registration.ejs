@@ -1,0 +1,81 @@
+
+<%- include("partials/header.ejs") %>
+
+<body class="body_teacher">
+    <main class="teacher_main">
+        <div>
+        <div class="horizontal_background_1">
+            <div class="vertical_background_teacher_1">
+                <div>
+                    <h1>Cadastro de<br> Professores</h1>
+                    <hr>
+               </div>
+                <div>
+                    <% if (msgSuccess) { %>
+                        <div class="alert alert-success" role="alert">
+                           <%= msgSuccess %>
+                        </div>
+
+                    <% } %>
+                    <% if (msgErr) { %>
+                        <div class="alert alert-danger" role="alert">
+                            <%= msgErr %>
+                       </div>
+                    <% } %>   
+                    <form class="form-teacher" action="/teacherregistration/save" method="POST">
+                        <input type="text" name="name" placeholder="Nome do Professor"/><br>
+                        <select name="id">
+                                <option select value="0" >Nenhuma sala</option>
+                            <% classrooms.forEach(classroom =>  {%>
+                                <option   value="<%= classroom.id %>"><%= classroom.nome_sala %></option>
+                            <% }) %>
+                        </select><br>
+                        <button>Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="vertical_background_teacher_2">
+                <img width="300px" height="300px" src="/img/panda.png" alt="panda">
+                <a href="/"><span><img class="seta-teacher" src="/img/arrow.png" alt="seta"/></span></a>
+            </div>
+        </div>
+        <div class="horizontal_background_2">
+                <ul>
+                    <% TeacherAndClassrom.forEach(tc => { %>
+                        <% if(tc.id_sala == null){ %>
+                                <li id="blue-highlight">
+                                    <span><%= tc.nome %></span>
+                                    <% if(tc.id_sala == null){ %>
+                                        <span>Sala: - </span>
+                                    <% } else{ %>  
+
+                                    <span>Sala: <%= tc.nome_sala %> </span>
+                                    <% } %>
+
+                                    <a href="/teacher/edit/<%= tc.id %>"><span title="editar"><i class="fas fa-pencil-alt"></i></span></a>
+                                </li>
+                        <% } else{ %>  
+
+                                <li >
+                                    <span><%= tc.nome %></span>
+                                    <% if(tc.id_sala == null){ %>
+                                        <span>Sala: 0 </span>
+                                    <% } else{ %>  
+    
+                                    <span>Sala: <%= tc.nome_sala %> </span>
+                                    <% } %>
+    
+                                    <a href="/teacher/edit/<%= tc.id %>"><span title="editar"><i class="fas fa-pencil-alt"></i></span></a>
+                                </li>
+                        <% } %>
+
+                    <% })%>
+
+                </ul>
+        </div>
+        
+    </main>
+
+</body>
+
+<%- include("partials/footer.ejs") %>

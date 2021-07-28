@@ -1,0 +1,60 @@
+<%- include("../partials/header.ejs") %>
+<body>
+    <main id="registerClass-style">
+        <div class="vertical-background-registerClass">
+                    <div class="registerClass-title">
+                        <h1>Cadastro de<br> Salas de Aula</h1>
+                        <hr>
+                    </div>
+                  
+                    <div class="registerClass-form"> 
+                  
+                        <form  action="/registerclass" method="post">
+                            <% if (msgSuccess) { %>
+                                <div class="alert alert-success" role="alert">
+                                   <%= msgSuccess %>
+                                </div>
+     
+                            <% } %>
+                            <% if (msgErr) { %>
+                                <div class="alert alert-danger" role="alert">
+                                    <%= msgErr %>
+                               </div>
+                            <% } %>   
+                            <input type="text" name="name" placeholder="Nome da sala"  /><br>
+                            <button>Cadastrar</button>
+                        </form>
+                        <a href="/registerClass"><span><img class="seta-registerClass" src="/img/arrow.png" alt="seta"/></span></a>
+                    </div>
+               
+        </div>
+        
+        <div class="vertical-background-2">
+            <div class="registerClass-container-classes editclassrom-container">
+                <header>
+                    <h2>Editar Sala</h2>
+                    <hr>
+
+                 
+                </header>
+                <ul >
+
+                        <li >
+                            <div class="registerClass-small-container-classes editclassrom-container">
+                                <span>Sala: 
+                                    <form action="/registerclassroom/update" method="post">
+                                        <input type="hidden" name="id" value="<%= classroom.id %>"/>
+                                        <input  placeholder="Novo nome" class="input_edit_classroom" name="name" value="<%= classroom.nome_sala %>"/></span>
+                                        <button class="button_edit_classroom"><i class="fas fa-check"></i></button>
+                                    </form>
+                                    <span>Professores: 3</span>
+                            </div>
+                        </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+<%- include("../partials/footer.ejs") %>

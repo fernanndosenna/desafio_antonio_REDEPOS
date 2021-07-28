@@ -1,0 +1,41 @@
+
+.input_edit_teacher{
+    font-size: 13px;    
+    border: 1px solid #888888;
+    border-radius: 81.5px;
+    text-align: center; 
+    color: #616161;
+
+}
+.select_edit_teacher{
+    font-size: 15px;      
+    border: 1px solid #888888;
+    border-radius: 81.5px;
+    text-align: center;
+    color: #616161;
+}
+.button_edit_teacher{
+   float: right;
+}
+
+
+.horizontal_background_2_edit_teacher ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding-left: 0;
+}
+.horizontal_background_2_edit_teacher ul div{
+    margin-top: 20px;
+}
+.horizontal_background_2_edit_teacher ul div h3{
+    color: #5A5A5A;
+}
+.horizontal_background_2_edit_teacher ul li{
+    margin-bottom: 20px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

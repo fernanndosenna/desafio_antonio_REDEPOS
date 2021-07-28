@@ -1,0 +1,50 @@
+<!--********* ARQUIVO DE VIEW PARA CADASTRO DE AULAS  **************-->
+
+<%- include("partials/header.ejs") %>
+<body>
+    <main id="registerClass-style">
+        <div class="vertical-background-registerClass">
+                    <div class="registerClass-title">
+                        <h1>Cadastro de<br> Salas de Aula</h1>
+                        <hr>
+                    </div>
+                  
+                    <div class="registerClass-form"> 
+                  
+                        <form  action="/registerclass" method="post">
+                            <% if (msgSuccess) { %>
+                                <div class="alert alert-success" role="alert">
+                                   <%= msgSuccess %>
+                                </div>
+     
+                            <% } %>
+                            <% if (msgErr) { %>
+                                <div class="alert alert-danger" role="alert">
+                                    <%= msgErr %>
+                               </div>
+                            <% } %>   
+                            <input type="text" name="name" placeholder="Nome da sala" required/><br>
+                            <button>Cadastrar</button>
+                        </form>
+                        <a href="/"><span><img class="seta-registerClass" src="/img/arrow.png" alt="seta"/></span></a>
+                    </div>
+               
+        </div>
+        
+        <div class="vertical-background-2">
+            <div class="registerClass-container-classes">
+                <ul>
+                    <% classrooms.forEach(classroom => { %>
+                        <li>
+                            <a href="/registerclassroom/edit/<%= classroom.id %>"><div class="registerClass-img-edit" href="#" title="editar"><i class="fas fa-pencil-alt"></i></div></a>
+                            <div class="registerClass-small-container-classes"><span>Sala: <%= classroom.nome_sala %></span></div>
+                        </li>
+                    <% }) %>    
+
+                 
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Roboto,sans-serif;
+    
+}
+ul{
+    list-style: none;
+}
+
+
+body{
+    animation: preload 200ms ease-in;
+}
+@keyframes preload{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+.msgSuccess{
+    color: rgb(88, 185, 79);
+    margin-bottom: 10px;
+}
+.msgErr{
+    color: rgb(255, 109, 109);
+    margin-bottom: 10px;
+
+}

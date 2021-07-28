@@ -1,0 +1,15 @@
+.button_edit_students{
+    position: absolute;
+    right: 40px;
+}
+.input_edit_students{
+    border: 1px solid #888888;
+    border-radius: 81.5px;
+    text-align: center;
+}
+.select_edit_students{
+    border: 1px solid #888888;
+    border-radius: 81.5px;
+    text-align: center;
+    color: #616161;
+}

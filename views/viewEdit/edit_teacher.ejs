@@ -1,0 +1,77 @@
+<!--********* ARQUIVO DE VIEW PARA CADASTRO DE PROFESSOR ***********-->
+
+<%- include("../partials/header.ejs") %>
+
+<body class="body_teacher">
+    <main class="teacher_main">
+        <div>
+        <div class="horizontal_background_1">
+            <div class="vertical_background_teacher_1">
+                <div>
+                    <h1>Cadastro de<br> Professores</h1>
+                    <hr>
+               </div>
+                <div>
+                  
+                    <form class="form-teacher" action="/teacherregistration/save" method="POST">
+                        <input type="text" name="name" placeholder="Nome do Professor"/><br>
+                        <select name="id">
+                                <option select value="0" >Nenhuma sala</option>
+                            <% classrooms.forEach(classroom =>  {%>
+                                <option   value="<%= classroom.id %>"><%= classroom.nome_sala %></option>
+                            <% }) %>
+                        </select><br>
+                        <button>Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="vertical_background_teacher_2">
+                <img width="300px" height="300px" src="/img/panda.png" alt="panda">
+                <a href="/teacherregistration"><span><img class="seta-teacher" src="/img/arrow.png" alt="seta"/></span></a>
+            </div>
+        </div>
+        <div class="horizontal_background_2 horizontal_background_2_edit_teacher">
+                <ul>
+                    <div>
+                        <h3>Edição</h3>
+                        <hr>
+                    </div>
+                        <li>
+                            <form action="/teacher/update" method="post">
+
+                                <span >
+                                    <input type="hidden" name="id" value="<%= teacher.id %>"/>
+                                    <input  placeholder="nome" class="input_edit_teacher" name="name" value="<%= teacher.nome %>"/>
+                                </span>
+                                <span >Sala:
+                                        <select  name="id_sala" class="select_edit_teacher">
+                                              <option  value="<% 0 %>"  selected >Nenhuma sala</option>
+                                            <% if(teacher.nome_sala == null){ %>
+                                                <option  value="<% 0 %>"  selected >Nenhuma sala</option>
+                                            <% } else{ %> 
+                                                 <option value="<%= teacher.id_sala%>" selected ><%= teacher.nome_sala %></option>
+                                            <% } %>
+
+                                            <% classrooms.forEach(classroom =>  {%>
+                                                <option   value="<%= classroom.id %>" ><%= classroom.nome_sala %></option>
+                                            <% }) %>    
+                                        </select>
+                                </span>
+                                <button class="button_edit_classroom button_edit_teacher"><i class="fas fa-check"></i></button>
+                            </form>
+                      
+                          
+                        </li>
+                        <% if (msgErr) { %>
+                            <span  class="alert alert-danger danger-edit" role="alert">
+                                <%= msgErr %>
+                            </span>
+                        <% } %>
+                </ul>
+        </div>
+        
+    </main>
+
+</body>
+
+<%- include("../partials/footer.ejs") %>

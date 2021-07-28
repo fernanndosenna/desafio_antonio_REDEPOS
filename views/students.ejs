@@ -1,0 +1,76 @@
+<%- include("partials/header.ejs") %>
+    <body class="body-students">
+        <main id="main-students">
+            <div class="students-background-1">
+                <header>
+                    <h1>Cadastro de Alunos</h1>
+                    <hr>
+                </header>
+                <div>
+                    <form action="/students/save" method="post">
+                        <input type="text" name="nome_aluno" placeholder="Nome do Aluno"/>
+                        <select name="id_professor" id="" placeholder="Selecionar Aluno">
+                            <option select value="0" >Nenhum professor</option>
+                            <% professores.forEach(professor => { %>
+                                <option value="<%= professor.id %>"><%= professor.nome %></option>
+                            <% })%>
+                        </select>
+                        <button>Cadastrar</button>
+                      
+                    </form>
+                    
+                    <a href="/"><span><img class="seta-students" src="/img/arrow.png" alt="seta"/></span></a>
+                </div>
+                <% if (msgSuccess) { %>
+                       <span class="msgSuccess"><%= msgSuccess %> <span>
+
+                <% } %>
+                <% if (msgErr) { %>
+                    <span class="msgErr"> <%= msgErr %><span>
+                <% } %>  
+            </div>
+
+            <div class="students-background-2">
+                <div class="list-background">
+                    <ul>
+                        <% alunosEprofessores.forEach(ap => { %>
+                            <% if(ap.id_professor == null){ %>
+
+
+                            <li id="highlight-red">
+                                <a href="/students/edit/<%= ap.id %>" title="editar"><i class="fas fa-pencil-alt"></i></a>
+                                <p><%= ap.nome_aluno %></p>
+                                <% if(ap.id_professor == null){ %>
+                                     <p>Professor: - </p>
+                                <% } else{ %>  
+                                    <p>Professor: <%= ap.nome %></p>
+
+                                <% } %>
+                            </li>
+
+                            <% } else{ %>  
+
+                                <li >
+                                    <a href="/students/edit/<%= ap.id %>" title="editar"><i class="fas fa-pencil-alt"></i></a>
+                                    <p><%= ap.nome_aluno %></p>
+                                    <% if(ap.id_professor == null){ %>
+                                         <p>Professor: 0</p>
+                                    <% } else{ %>  
+                                        <p>Professor: <%= ap.nome %></p>
+    
+                                    <% } %>
+                                </li>
+
+                            <% } %>
+
+                        <% })%>
+
+                    </ul>
+                </div>
+                <div class="img-background">
+                    <img  src="/img/aluno.png">
+                </div>
+            </div>
+        </main>
+    </body>
+<%- include("partials/footer.ejs") %>

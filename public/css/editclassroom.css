@@ -1,0 +1,53 @@
+.input_edit_classroom{
+    font-size: 13px;
+    border: 1px solid #888888;
+    border-radius: 81.5px;
+    text-align: center;
+}
+@keyframes animebutton{
+    from{
+        box-shadow: 1px 1px 5px 2px #e5d1ff;
+    }to{
+        box-shadow: 1px 1px 8px 3px #AD95CC;
+
+    }
+}
+
+.button_edit_classroom{
+    animation: animebutton 500ms infinite ;
+    font-size: 12px;
+    padding: 2px;
+    color: #FFFFFF;
+    border-radius: 50px;
+    background:#AD95CC;
+    transition: 200ms ease-in;
+    cursor:pointer;
+    border: 1px solid #888888;
+
+}
+.button_edit_classroom:hover{
+    box-shadow: 1px 1px 5px 2px #AD95CC;
+    transform: scale(1.1);
+}
+.editclassrom-container span{
+    display: flex;
+}
+.editclassrom-container span:nth-child(2){
+    top: 40px;
+    left: 10;
+    width: 150px;
+}
+.editclassrom-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.editclassrom-container ul{
+    padding-left: 0;
+}
+
+.editclassrom-container header h2 {
+    color: #616161;
+
+}

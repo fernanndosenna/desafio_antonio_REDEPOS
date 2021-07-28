@@ -1,0 +1,173 @@
+.highlight-red{
+    background:rgb(252, 169, 169);
+}
+.body-students{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-students{
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0,1);
+    background: #FFFFFF;
+}
+
+.students-background-1{
+    background: #FFFFFF;
+    height:40vh;
+    display:flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.students-background-1 header{
+    background: #FFFFFF;
+    height:350px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.students-background-1 header hr{
+    width:200px;
+}
+.students-background-1 header h1{
+    margin-top: 20px;
+    color: #616161;
+
+}
+.students-background-1 div{
+    background: #FFFFFF;
+    height:450px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 20px;
+}
+.seta-students{
+    left:20px;
+    position:absolute;
+}
+.seta-students:hover{
+    transform: scale(1.1);
+}
+.students-background-1 div form{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:200px;
+}
+
+.students-background-1 div form input{
+    height: 30px;
+    margin-top: 10px;
+    border: 1px solid #888888;
+    border-radius: 81.5px;
+    text-align: center;
+    width:100%;
+}
+
+
+.students-background-1 div form select{
+    height: 30px;
+    margin-top: 10px;
+    border: 1px solid #888888;
+    border-radius: 81.5px;
+    text-align: center;
+    width:100%;
+    color: #616161;
+    
+}
+
+.students-background-1 div form button{
+    margin-top: 10px;
+    height: 30px;
+    box-sizing: border-box;
+    border-radius: 81.5px;
+    font-size: 15px;    
+    color: #FFFFFF;
+    background:#AD95CC;
+    transition: 200ms ease-in;
+    cursor:pointer;
+    border: 1px solid #888888;
+    width:100%;
+}
+.students-background-1 div form button:hover{
+    box-shadow: 1px 1px 5px 2px #AD95CC;
+    transform: scale(1.1);
+}
+
+
+.students-background-2{
+    height: 60vh;
+    width:100%;
+    display:flex;
+}
+.img-background{
+    background: #FFFFFF;
+    width:50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.list-background{
+    background: #FFFFFF;
+    width:50%;
+    background:#AD95CC;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.list-background ul{
+    border: 1px solid #888888;
+    background: #FFFFFF;
+    width: 350.07px;
+    height: 350.92px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.171);
+    border-radius: 28px;
+    overflow:auto; 
+    display:flex;
+    padding-left: 0;
+    flex-direction: column;
+    align-items: center;
+}
+.list-background ul li{
+    margin-top: 10px;
+    position: relative;
+    width: 314px;
+    height: 87px;
+    background: #FFFFFF;
+    border: 1px solid #5A5A5A;
+    box-sizing: border-box;
+    border-radius: 81.5px;
+    text-align: center;
+    color: #5A5A5A;
+
+}
+.list-background ul li p:first-child{
+    margin-top: 10px;
+}
+.list-background ul li p:nth-child(2){
+    margin-top: 10px;
+}
+.list-background ul li a{
+    position:absolute;
+    right: 30px;
+    color: #5A5A5A;
+    top: 20px;
+    transition: 100ms ease-in;
+}
+.list-background ul li a:hover{
+    transform: scale(1.1);
+}

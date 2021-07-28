@@ -1,0 +1,162 @@
+#registerClass-style{
+    display: flex;
+}
+.registerClass-container-classes{
+    width: 439px;
+    height: 590px;
+    background: #FFFFFF;
+    border: 1px solid #888888;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.171);
+    border-radius: 28px;
+    overflow:auto; 
+
+}
+.registerClass-container-classes a{
+    text-decoration: none;
+}
+.registerClass-container-classes ul li{
+    display:flex;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: space-around;
+}
+.registerClass-img-edit{
+    font-size: 50px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 82px;
+    height: 72px;
+    background: #FFFFFF;
+    border: 1px solid #888888;
+    box-sizing: border-box;
+    border-radius: 81.5px;
+    color: #5A5A5A;
+    transition: 100ms ease-in;
+    cursor: pointer;
+
+}
+.registerClass-img-edit:hover{
+    transform: scale(1.1);
+}
+.registerClass-small-container-classes{
+    width: 270px;
+    height: 107px;
+    background: #FFFFFF;
+    border: 1px solid #888888;
+    box-sizing: border-box;
+    border-radius: 81.5px;
+    position: relative;
+}
+.registerClass-small-container-classes span:first-child{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 20px;
+    color: #5A5A5A;
+}
+
+.registerClass-small-container-classes span:nth-child(2){
+    position: absolute;
+    left: 80px;
+    font-size: 20px;
+    top: 70px;
+    color: #5A5A5A;
+}
+/*images*/
+::-webkit-scrollbar-track {
+    background: #b4b4b4a2;
+
+
+}
+::-webkit-scrollbar {
+    width: 12px;
+    background: #F4F4F4;
+    border-radius: 10px;
+
+}
+::-webkit-scrollbar-thumb {
+    background-color:#888888;
+    border-radius: 10px;
+
+}
+.registerClass-title{
+    width:100%;
+    height:50%;
+    position:relative;
+}
+.registerClass-title h1{
+    position: absolute;
+    top: 40px;
+    left:70px;
+    font-size: 50px;
+    line-height: 59px;
+    color: #616161;
+
+}
+.registerClass-title hr{
+    position: absolute;
+    top: 180px;
+    width:300px;
+    left:70px;
+}
+.registerClass-form{
+    height:50%;
+    width:100%;
+    position: relative;
+}
+.registerClass-form a{
+    color: transparent;
+}
+.registerClass-form form{
+    width:200px;
+    margin-left: 70px;
+}
+.registerClass-form form input{
+    width:100%;
+    font-size: 15px;    
+    line-height: 30px;
+    width: 270px;
+    height: 45px;
+    border: 1px solid #888888;
+    border-radius: 81.5px;
+    text-align: center;
+    
+}
+.registerClass-form form button{
+    margin-top: 20px;
+    width: 270px;
+    height: 45px;
+    box-sizing: border-box;
+    border-radius: 81.5px;
+    font-size: 15px;    
+    color: #FFFFFF;
+    background:#AD95CC;
+    transition: 200ms ease-in;
+    cursor:pointer;
+    border: 1px solid #888888;
+}
+.registerClass-form form button:hover{
+    box-shadow: 1px 1px 5px 2px #AD95CC;
+    transform: scale(1.1);
+}
+.vertical-background-registerClass{
+    display:flex;
+    
+    align-items: center; 
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+    background-color:#FFFFFF;
+
+}
+.seta-registerClass{
+    position: absolute;
+    top: 250px;
+    cursor:pointer;
+    left:20px;
+}
+.seta-registerClass:hover{
+    transform: scale(1.1);
+}

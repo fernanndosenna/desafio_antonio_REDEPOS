@@ -1,0 +1,69 @@
+<%- include("../partials/header.ejs") %>
+    <body class="body-students">
+        <main id="main-students">
+            <div class="students-background-1">
+                <header>
+                    <h1>Cadastro de Alunos</h1>
+                    <hr>
+                </header>
+                <div>
+                    <form action="/students/save" method="post">
+                        <input type="text" name="nome_aluno" placeholder="Nome do Aluno"/>
+                        <select name="id_professor" id="" placeholder="Selecionar Aluno">
+                            <option select value="0" >Nenhum professor</option>
+                            <% professores.forEach(professor => { %>
+                                <option value="<%= professor.id %>"><%= professor.nome %></option>
+                            <% })%>
+                        </select>
+                        <button>Cadastrar</button>
+                      
+                    </form>
+                    
+                    <a href="/"><span><img class="seta-students" src="/img/arrow.png" alt="seta"/></span></a>
+                </div>
+             
+            </div>
+
+            <div class="students-background-2">
+                <div class="list-background">
+                    <ul>
+
+                            <li>
+                                <form action="/students/update" method="post">
+
+                                <input type="hidden" name="id" value="<%= aluno.id %>"/>
+                                
+                                <p><input type="text" class="input_edit_students" name="nome_aluno" value="<%= aluno.nome_aluno %>" /></p>
+                                <p>
+                                       <select  name="id_professor" class="select_edit_students">
+                                            <option  value="<% 0 %>"  selected >Nenhum professor</option>
+                                            <% if(aluno.nome == null){ %>
+                                                <option  value="<% 0 %>"  selected >Nenhum professor</option>
+                                            <% } else{ %> <!--o nome é o nome do professor, a informacao do aluno seria nome_aluno-->
+                                                <option value="<%= aluno.id_professor %>" selected ><%= aluno.nome %></option>
+                                            <% } %>
+
+                                            <% professores.forEach(professor =>  {%>
+                                                <option   value="<%= professor.id %>" ><%= professor.nome %></option>
+                                            <% }) %> 
+                                       </select>
+                                       <button class="button_edit_classroom button_edit_students"><i class="fas fa-check"></i></button>
+
+                                </p>
+                                <% if (msgErr) { %>
+                                    <span  class="msgErr" role="alert">
+                                        <%= msgErr %>
+                                    </span>
+                                <% } %>
+                              </form>
+                            </li>
+
+                    </ul>
+                </div>
+                <div class="img-background">
+                    <img  src="/img/aluno.png">
+                </div>
+            </div>
+        </main>
+    </body>
+<%- include("../partials/footer.ejs") %>
