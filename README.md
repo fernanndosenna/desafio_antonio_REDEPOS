@@ -1,4 +1,4 @@
-###EXECUÇÃO DO PROJETO
+EXECUÇÃO DO PROJETO
 
 npm install 
 
