@@ -1,11 +1,11 @@
-EXECUÇÃO DO PROJETO
-
-ROTA PRINCIPAL  `/ `
-
+###EXECUÇÃO DO PROJETO
 
 npm install 
 
 npm start
+
+ROTA PRINCIPAL  `/ `
+
 
 
 
